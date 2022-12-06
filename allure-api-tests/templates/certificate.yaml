@@ -1,0 +1,24 @@
+{{ range $domain := .Values.domains }}
+{{ if and ( ne "yavkursi.info" $domain ) ( ne "education.maximumtest.kz" $domain ) }}
+---
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: '{{ $domain | replace "." "-"}}'
+spec:
+  dnsNames: 
+    - {{ $domain }}
+  secretName: {{ $domain | replace "." "-"}}-tls
+  issuerRef:
+  {{ if $domain | ne "education.dersevi.az" }}  
+    name: cert-manager-google-issuer
+  {{ else }}
+    name: letsencrypt-http
+  {{ end }}
+    kind: ClusterIssuer
+
+{{ end }}
+{{ end }}
+
+
+

@@ -1,0 +1,60 @@
+{{ if .Values.IngressRoute | eq "True" }}
+{{ range $domain := .Values.domains }}
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: web-{{ $domain }}-notls
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`{{ $domain }}`) && PathPrefix(`/`)
+    kind: Rule
+    services:
+    - name: {{ $.Release.Name }}
+      port: 80
+    middlewares:
+    - name: {{ $.Release.Name}}-redirectscheme
+
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: {{$.Release.Name}}-www-{{ $domain }}-notls
+spec:
+  entryPoints:
+    - web
+  routes:
+  - match: Host(`www.{{ $domain }}`) && PathPrefix(`/`)
+    kind: Rule
+    services:
+    - name: {{ $.Release.Name }}
+      port: 80
+    middlewares:
+    - name: {{$.Release.Name}}-redirectscheme
+
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: web-{{ $domain }}-tls
+spec:
+  entryPoints:
+    - websecure
+  routes:
+  - match: Host(`{{ $domain }}`) && PathPrefix(`/`)
+    kind: Rule
+    services:
+    - name: {{ $.Release.Name }}
+      port: 80
+{{ if $.Values.WhiteList.Enabled | eq "True"}}
+    middlewares:
+    - name: {{ $.Release.Name }}-sizelimit
+    - name: {{ $.Release.Name }}-ipwhitelist
+{{ end }}
+  tls:
+    secretName: {{ $domain | replace "." "-"}}-tls  
+
+{{ end }}
+{{ end }}

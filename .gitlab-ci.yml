@@ -1,0 +1,115 @@
+variables:
+  REGISTRY: cr.yandex/crpk51ud2cjku2i8e2b6
+  GROUP_NAME: api-tests
+  APP_TEST_FILE: test.Dockerfile
+  APP_IMAGE_TEST: $REGISTRY/$GROUP_NAME-$CI_PROJECT_NAME-job-pytest:$CI_COMMIT_SHORT_SHA
+  APP_ALLURE_FILE: allure.Dockerfile
+  APP_IMAGE_ALLURE: $REGISTRY/$GROUP_NAME-$CI_PROJECT_NAME-job-allure:$CI_COMMIT_SHORT_SHA
+  APP_NOTIFY_FILE: notify.Dockerfile
+  APP_IMAGE_NOTIFY: $REGISTRY/$GROUP_NAME-$CI_PROJECT_NAME-job-notify:$CI_COMMIT_SHORT_SHA
+  APP_IMAGE: $REGISTRY/$GROUP_NAME-$CI_PROJECT_NAME:$CI_COMMIT_SHORT_SHA
+  DOCKER_HOST: tcp://localhost:2375
+  DOCKER_TLS_CERTDIR: ''
+  NAME_PYTEST: staging
+  REPORT_LINK: 'https://allure-api-test.umax.dev/allure-docker-service/projects/default/reports/latest/index.html'
+
+stages:
+  - test
+  - build
+  - deploy
+  - notify
+
+test:
+  stage: test
+  image: cr.yandex/crpk51ud2cjku2i8e2b6/maximum-dind:master
+  services:
+    - cr.yandex/crpk51ud2cjku2i8e2b6/docker:dind
+  script:
+    - mkdir -p ~/.docker
+    - echo $RegistryConfig | base64 -d > ~/.docker/config.json
+    - docker build --no-cache -t $APP_IMAGE_TEST -f $APP_TEST_FILE .
+    - docker run -v "${PWD}/allure-results:/usr/src/app/allure-results" $APP_IMAGE_TEST
+  allow_failure: true
+  tags:
+    - k8s-test01
+  artifacts:
+    paths:
+      - ./allure-results
+    when: always
+    expire_in: 1 day
+  only:
+    - main
+
+build-allure-report:
+  stage: build
+  image: cr.yandex/crpk51ud2cjku2i8e2b6/maximum-dind:master
+  services:
+    - cr.yandex/crpk51ud2cjku2i8e2b6/docker:dind
+  script:
+    - mkdir -p ~/.docker
+    - echo $RegistryConfig | base64 -d > ~/.docker/config.json
+    - ls -la ./allure-results
+    - docker build --no-cache -t $APP_IMAGE_ALLURE -f $APP_ALLURE_FILE .
+    - docker push $APP_IMAGE_ALLURE
+    - docker run -d --name allure-api-tests $APP_IMAGE_ALLURE
+    - docker cp allure-api-tests:/app/allure-docker-api/static/projects/default/reports/latest ./allure-report
+  tags:
+    - k8s-test01
+  artifacts:
+    paths:
+      - ./allure-results
+      - ./allure-report
+    expire_in: 1 day
+  only:
+    - main
+
+deploy-allure-report:
+  stage: deploy
+  image: cr.yandex/crpk51ud2cjku2i8e2b6/helm-deploy:master
+  before_script:
+    - export K8S_CONFIG=$K8S_CONFIG_TEST01
+    - export Name=$NAME_PYTEST
+    - export REPLICA_COUNT='1'
+  script:
+    - echo $YANDEX_TOKEN | base64 --decode > /root/.config/yandex-cloud/config.yaml
+    - echo $K8S_CONFIG | base64 --decode > ~/.kube/config
+    - cd allure-api-tests
+    - helm upgrade --atomic --install
+      --set APP_IMAGE=$APP_IMAGE_ALLURE
+      --set REPLICA_COUNT=$REPLICA_COUNT
+      --set JOB_activeDeadlineSeconds=$JOB_activeDeadlineSeconds
+      --set RegistryConfig=$RegistryConfig
+      --namespace phoenix
+      $Name-allure-api-tests .
+  tags:
+    - k8s-test01
+  except:
+    variables:
+      - $Name != null
+  only:
+    - main
+
+telegram-bot-notify:
+  stage: notify
+  image: cr.yandex/crpk51ud2cjku2i8e2b6/maximum-dind:master
+  services:
+    - cr.yandex/crpk51ud2cjku2i8e2b6/docker:dind
+  before_script:
+    - export REPORT_LINK=$REPORT_LINK
+    - export NOTIFY_TOKEN=$NOTIFY_TOKEN
+  script:
+    - sed -i "s|\"reportLink\":\ \"\"|\"reportLink\":\ \"${REPORT_LINK}\"|" ./notifications/telegram-config.json
+    - sed -i "s|\"token\":\ \"\"|\"token\":\ \"${NOTIFY_TOKEN}\"|" ./notifications/telegram-config.json
+    - docker build -t $APP_IMAGE_NOTIFY -f $APP_NOTIFY_FILE .
+    - docker run -d $APP_IMAGE_NOTIFY
+  tags:
+    - k8s-test01
+  artifacts:
+    paths:
+      - ./allure-report
+    expire_in: 1 day
+  only:
+    - main
+  
+
+

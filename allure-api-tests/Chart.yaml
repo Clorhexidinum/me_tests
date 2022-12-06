@@ -1,0 +1,8 @@
+---
+apiVersion: v2
+name: allure-api-tests
+version: 1.0.0
+description: allure-api-tests
+maintainers:
+  - name: Chuvashev Roman
+    appVersion: 1.0 
