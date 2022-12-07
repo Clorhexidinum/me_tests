@@ -5,11 +5,12 @@
 - [Что проверяем](#heavy_check_mark-описание)
 - [Запуск тестов из Jenkins](#-запуск-тестов-из-jenkins)
 - [Запуск тестов из терминала](#computer-запуск-тестов-из-терминала)
-- [Отчеты](#bar_chart-отчеты-о-прохождении-тестов-доступны-в-allure)
-- - [Allure](#-allure)
-- - [Telegram](#-telegram)
-- [Видео с прогоном тестов](#movie_camera-видео-с-прогоном-тестов)
-- [Allure TestOps](#-проект-интегрирован-с-allure-testOps)
+- [Отчеты](#bar_chart-отчеты-о-прохождении-тестов)
+  - [Allure](#-allure)
+  - [Telegram](#-telegram)
+- [Тестовые артефакты](#movie_camera-тестовые-артефакты)
+- [Allure TestOps](#-проект-интегрирован-с-allure-testops)
+- [Atlassian Jira](#-результаты-выполнения-тестов-интегрированы-с-atlassian-jira)
 
 ## :gear: Проект реализован с использованием
 
@@ -48,36 +49,44 @@
 pytest *test_folder*
 ```
   
-## <img width="3%" title="Allure" src="img/logo/Allure.svg"> Отчеты о прохождении тестов доступны в [Allure](https://jenkins.autotests.cloud/job/002_Clorhexidinum_diploma_python/8/allure/)
+## :bar_chart: Отчеты о прохождении тестов 
+  
+### <img width="3%" title="Allure" src="img/logo/Allure.svg"> Allure
+
+После прохождения тестов формируется отчет в [Allure report](https://jenkins.autotests.cloud/job/002_Clorhexidinum_diploma_python/8/allure/)
+
+<img src="img/screen/Bot.jpg" alt="Allure"/>
+  
 
 ### <img width="3%" title="Telegram" src="img/logo/Telegram.svg"> Telegram
 
-Настроена отправка оточета ботом в Telegram
+И отправляется краткий отчет в Telegram
 
 <img src="img/screen/Bot.jpg" alt="Telegram"/>
+  
+## :movie_camera: Тестовые артефакты
 
-## :movie_camera: Видео с прогоном тестов
+В результате прохождения тестов собираются следующие артефакты:
 
-В отчетах Allure для каждого теста прикреплен не только скриншот, но и видео прохождения теста
+- Скриншот страницы
+
+- Логи браузера
+  
+- Dump страницы
+  
+- Видео прохождения
 
 <p align="center">
   <img title="Video" src="img/gif/test.gif">
 </p>
 
-## Проект интегрирован с Allure TestOps
-<img width="3%" title="Allure" src="img/logo/Allure_TO.svg"> 
+## <img width="3%" title="Allure" src="img/logo/Allure_TO.svg"> Проект интегрирован с Allure TestOps
 
-#### Представлены тест-кейсы
 
-<img src="img/screen/TOTest.jpg" alt="TO"/>
+## <img width="3%" title="JIRA" src="img/logo/"> Результаты выполнения тестов интегрированы с Atlassian Jira
+  
+  
 
-#### Представлены дашборды аналитики
-
-<img src="img/screen/TODash.jpg" alt="TO"/>
-
-#### Представлены запуски
-
-<img src="img/screen/TOLaunch.jpg" alt="TO"/>
 
   
   
