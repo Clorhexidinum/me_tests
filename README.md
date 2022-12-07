@@ -60,7 +60,7 @@
   
   <details><summary>3. Нажать кнопку "Собрать"</summary>
   <p align="center">
-    <img src="/README/scpeenshot.png" alt="screenshot"/>
+    <img src="/README/jenkins2.png" alt="jenkins2"/>
   </p>
   </details>
   
@@ -106,7 +106,7 @@ pytest *test_folder*
    ### UI
   <details><summary>Скриншот страницы</summary>
   <p align="center">
-    <img src="/README/scpeenshot.png" alt="screenshot"/>
+    <img src="/README/screenshot.png" alt="screenshot"/>
   </p>
   </details>
   
