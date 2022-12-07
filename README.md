@@ -46,9 +46,23 @@
   
   Для запуска тестов из Jenkins
 
-  1. Необходимо нажать кнопку "Собрать с параметрами".
-  2. Выбрать параметры.
-  3. Нажать кнопку "Собрать"
+  <details><summary>1. Необходимо нажать кнопку "Собрать с параметрами".</summary>
+  <p align="center">
+    <img src="/README/jenkins.png" alt="jenkins"/>
+  </p>
+  </details>
+  
+  <details><summary>2. Выбрать параметры.</summary>
+  <p align="center">
+    <img src="/README/jenkins2.png" alt="jenkins"/>
+  </p>
+  </details>
+  
+  <details><summary>3. Нажать кнопку "Собрать"</summary>
+  <p align="center">
+    <img src="/README/scpeenshot.png" alt="screenshot"/>
+  </p>
+  </details>
   
   ### :heavy_plus_sign: Параметры сборки
 
@@ -69,6 +83,12 @@ pytest *test_folder*
 ### <img src="/README/icons/allure.svg" width="50" height="50"  alt="allure"/> Allure
 
 После прохождения тестов формируется отчет в [Allure report](https://jenkins.autotests.cloud/job/002_Clorhexidinum_diploma_python/8/allure/)
+  <p align="center">
+    <img src="/README/report1.png" height="195" alt="allure"/>
+    <img src="/README/report3.png" height="195" alt="allure"/>
+    <img src="/README/report4.png" height="195" alt="allure"/>
+  </p>
+  
 
 
   
@@ -77,7 +97,7 @@ pytest *test_folder*
 
 И отправляется краткий отчет в Telegram
 
-<img src="img/screen/Bot.jpg" alt="Telegram"/>
+<img src="/README/notify.png" height="250" alt="notify"/>
   
 ## :movie_camera: Тестовые артефакты
 
@@ -124,15 +144,21 @@ pytest *test_folder*
 
   <details><summary>Body</summary>
   <p align="center">
-    <img src="/README/body.png" alt="png"/>
+    <img src="/README/response.png" alt="png"/>
   </p>
   </details>
   
 
 ## <img src="/README/icons/testops.svg" width="50" height="50"  alt="testops"/> Проект интегрирован с Allure TestOps
+  <p align="center">
+    <img src="/README/test_ops2.png" height="250" alt="allure"/>
+    <img src="/README/test_ops.png" height="250" alt="allure"/>
+  </p>
 
 
 ## <img src="/README/icons/jira.svg" width="50" height="50"  alt="jira"/> Результаты выполнения тестов интегрированы с Atlassian Jira
+  
+  <img src="/README/jira.png" height="250" alt="jira"/>
   
   
 
