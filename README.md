@@ -67,18 +67,52 @@ pytest *test_folder*
 ## :movie_camera: Тестовые артефакты
 
 В результате прохождения тестов собираются следующие артефакты:
-
-- Скриншот страницы
-
-- Логи браузера
   
-- Dump страницы
+   ### UI
+  <details><summary>Скриншот страницы</summary>
+  <p align="center">
+    <img title="Screenshot" src="img/gif/test.gif">
+  </p>
+  </details>
   
-- Видео прохождения
+  <details><summary>Логи браузера</summary>
+  <p align="center">
+    <img title="Logs" src="img/gif/test.gif">
+  </p>
+  </details>
+  
+  <details><summary>Дамп страницы</summary>
+  <p align="center">
+    <img title="Dump" src="img/gif/test.gif">
+  </p>
+  </details>
+  
+  <details><summary>Видео прохождения</summary>
+  <p align="center">
+    <img title="Video" src="img/gif/test.gif">
+  </p>
+  </details>
 
-<p align="center">
-  <img title="Video" src="img/gif/test.gif">
-</p>
+  ### API
+
+  <details><summary>Curl</summary>
+  <p align="center">
+    <img title="Curl" src="img/gif/test.gif">
+  </p>
+  </details>
+
+  <details><summary>Headers</summary>
+  <p align="center">
+    <img title="Headers" src="img/gif/test.gif">
+  </p>
+  </details>
+
+  <details><summary>Body</summary>
+  <p align="center">
+    <img title="Body" src="img/gif/test.gif">
+  </p>
+  </details>
+  
 
 ## <img width="3%" title="Allure" src="img/logo/Allure_TO.svg"> Проект интегрирован с Allure TestOps
 
