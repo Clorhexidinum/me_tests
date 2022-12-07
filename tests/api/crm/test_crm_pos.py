@@ -3,9 +3,9 @@ import allure
 import pytest
 from maximumtest.utils.allure.attach import Attachments as attachments
 from maximumtest.utils.assertions.api_assert import Assertions
-from maximumtest.utils.requests import MyRequests
-from maximumtest.test_resources.json_schemas import schemas
-from maximumtest.test_resources import CrmModuleData
+from maximumtest.utils.requests.my_requests import MyRequests
+from maximumtest.test_resources.json_schemas.crm_module import schemas
+from maximumtest.test_resources.test_data.crm_module import CrmModuleData
 
 data = CrmModuleData.get_data()
 request = MyRequests()

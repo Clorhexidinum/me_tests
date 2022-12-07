@@ -4,8 +4,9 @@ import os
 class RequestData:
     @staticmethod
     def auth_key():
-        auth_key = {"api-key": os.getenv('API_KEY')}
+        auth_key = {"api-key": "56f9e118897887bbcff8db0ede9615e3608e9736106ea94aef18da35b556d385"}
         return auth_key
+
     @staticmethod
     def user_auth():
         user_auth = {

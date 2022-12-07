@@ -1,10 +1,10 @@
 import allure
 import pytest
-from maximumtest.utils.requests import MyRequests
+from maximumtest.utils.requests.my_requests import MyRequests
 from maximumtest.utils.assertions.api_assert import Assertions
-from maximumtest.utils.helpers import BaseCase
-from maximumtest.test_resources import ContentModuleData
-from maximumtest.test_resources import schema
+from maximumtest.utils.helpers.base_case import BaseCase
+from maximumtest.test_resources.test_data.content_module import ContentModuleData
+from maximumtest.test_resources.json_schemas.error import schema
 from maximumtest.test_resources.json_schemas import content_module
 from maximumtest.utils.requests.request_data import RequestData
 

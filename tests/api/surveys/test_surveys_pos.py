@@ -1,9 +1,9 @@
 import allure
 import pytest
-from maximumtest.utils.requests import MyRequests
+from maximumtest.utils.requests.my_requests import MyRequests
 from maximumtest.utils.assertions.api_assert import Assertions
-from maximumtest.test_resources import SurveysModule
-from maximumtest.test_resources.json_schemas import schemas
+from maximumtest.test_resources.test_data.surveys_module import SurveysModule
+from maximumtest.test_resources.json_schemas.surveys_module import schemas
 
 data = SurveysModule.get_data()
 schema = schemas

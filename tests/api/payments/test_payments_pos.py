@@ -1,8 +1,8 @@
 import allure
 import pytest
-from maximumtest.utils.requests import MyRequests
+from maximumtest.utils.requests.my_requests import MyRequests
 from maximumtest.utils.assertions.api_assert import Assertions
-from maximumtest.test_resources import PaymentsModuleData
+from maximumtest.test_resources.test_data.payments_module import PaymentsModuleData
 
 # import datetime
 

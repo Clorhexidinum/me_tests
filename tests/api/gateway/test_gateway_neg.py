@@ -1,8 +1,8 @@
 import allure
-from maximumtest.utils.requests import MyRequests
+from maximumtest.utils.requests.my_requests import MyRequests
 from maximumtest.utils.assertions.api_assert import Assertions
-from maximumtest.test_resources import GatewayData
-from maximumtest.test_resources import schema
+from maximumtest.test_resources.test_data.gateway import GatewayData
+from maximumtest.test_resources.json_schemas.error import schema
 from maximumtest.utils.requests.request_data import RequestData
 
 data = GatewayData.get_data()

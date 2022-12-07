@@ -1,8 +1,8 @@
 import allure
 import pytest
-from maximumtest.utils.requests import MyRequests
+from maximumtest.utils.requests.my_requests import MyRequests
 from maximumtest.utils.assertions.api_assert import Assertions
-from maximumtest.test_resources import data
+from maximumtest.test_resources.test_data.auth_module import data
 from maximumtest.test_resources.json_schemas.auth_module import schemas
 from maximumtest.utils.requests.request_data import RequestData
 

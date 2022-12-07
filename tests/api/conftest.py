@@ -1,5 +1,5 @@
 import pytest
-from maximumtest.utils.requests import MyRequests
+from maximumtest.utils.requests.my_requests import MyRequests
 from maximumtest.utils.requests.request_data import RequestData
 import allure
 

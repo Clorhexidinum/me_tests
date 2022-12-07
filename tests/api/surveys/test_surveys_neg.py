@@ -1,8 +1,8 @@
 import allure
-from maximumtest.utils.requests import MyRequests
+from maximumtest.utils.requests.my_requests import MyRequests
 from maximumtest.utils.assertions.api_assert import Assertions
-from maximumtest.test_resources import SurveysModule
-from maximumtest.test_resources import schema
+from maximumtest.test_resources.test_data.surveys_module import SurveysModule
+from maximumtest.test_resources.json_schemas.error import schema
 
 
 data = SurveysModule.get_data()

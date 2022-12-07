@@ -1,4 +1,4 @@
-from maximumtest import utils as path
+from maximumtest.utils.helpers.abs_path import to_resource as path
 
 
 class ContentModuleData:
@@ -1307,7 +1307,7 @@ class ContentModuleData:
         data = {
             "files": {
                 "url": "content/files/for_test_dont_remove",
-                "request": {'file': ('for_test_txt.txt', open(path.to_resource('for_test_txt.txt'), 'rb'))}
+                "request": {'file': ('for_test_txt.txt', open(path('for_test_txt.txt'), 'rb'))}
                 # "unique": ["name"]
             }
         }

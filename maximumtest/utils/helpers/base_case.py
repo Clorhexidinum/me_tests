@@ -3,17 +3,15 @@ import json.decoder
 
 
 class BaseCase:
-    @staticmethod
+
     def get_cookie(self, response: Response, cookie_name):
         assert cookie_name in response.cookies, f"В последнем запросе нет cookie с именем {cookie_name}"
         return response.cookies[cookie_name]
 
-    @staticmethod
     def get_header(self, response: Response, headers_name):
         assert headers_name in response.headers, f"В последнем запросе нет заголовка с именем {headers_name}"
         return response.headers[headers_name]
 
-    @staticmethod
     def get_json_value(self, response: Response, name):
         try:
             response_as_dict = response.json()
@@ -24,7 +22,6 @@ class BaseCase:
 
         return response_as_dict[name]
 
-    @staticmethod
     def get_first_json_item(self, response: Response):
         try:
             response_as_dict = response.json()

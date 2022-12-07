@@ -1,4 +1,4 @@
-from maximumtest import utils as path
+from maximumtest.utils.helpers.abs_path import to_resource as path
 
 
 class GatewayData:
@@ -16,7 +16,7 @@ class GatewayData:
                     'city': (None, 'Москва'),
                     'phone': (None, '+7 999 999 99 99'),
                     'email': (None, 'test@mail.com'),
-                    'file': ('for_test_txt.txt', open(path.to_resource('for_test_txt.txt'), 'rb'))
+                    'file': ('for_test_txt.txt', open(path('for_test_txt.txt'), 'rb'))
                 }
             },
 
