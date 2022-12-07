@@ -14,7 +14,7 @@ from maximumtest.utils.requests.request_data import RequestData
 @allure.tag('negative', 'api', 'content')
 @allure.label("owner", "Murat Kubekov")
 @pytest.mark.parametrize("module_name",
-                         ["banners", "header", "header_banners", "header-category", "header-subcategory",
+                         ["banners", "header", "header-banners", "header-category", "header-subcategory",
                           "product-card-labels", "product-cards", "summer-product-cards", "store-subject-templates",
                           "store-text-templates", "store-page-templates", "store-thanks-page-templates", "filters",
                           "teachers", "trial-lessons", "free-lessons", "vacancies", "accordion", "info-about-course",
