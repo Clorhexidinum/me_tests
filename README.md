@@ -86,25 +86,25 @@ pytest *test_folder*
    ### UI
   <details><summary>Скриншот страницы</summary>
   <p align="center">
-    <img title="Screenshot" src="img/gif/test.gif">
+    <img src="/README/scpeenshot.png" alt="screenshot"/>
   </p>
   </details>
   
   <details><summary>Логи браузера</summary>
   <p align="center">
-    <img title="Logs" src="img/gif/test.gif">
+    <img src="/README/logs.png" alt="logs"/>
   </p>
   </details>
   
   <details><summary>Дамп страницы</summary>
   <p align="center">
-    <img title="Dump" src="img/gif/test.gif">
+    <img src="/README/dump.png" alt="dump"/>
   </p>
   </details>
   
   <details><summary>Видео прохождения</summary>
   <p align="center">
-    <img title="Video" src="img/gif/test.gif">
+    <img src="/README/selenoid.gif" alt="video"/>
   </p>
   </details>
 
@@ -112,19 +112,19 @@ pytest *test_folder*
 
   <details><summary>Curl</summary>
   <p align="center">
-    <img title="Curl" src="img/gif/test.gif">
+    <img src="/README/curl.png" alt="curl"/>
   </p>
   </details>
 
   <details><summary>Headers</summary>
   <p align="center">
-    <img title="Headers" src="img/gif/test.gif">
+    <img src="/README/headers.png" alt="headers"/>
   </p>
   </details>
 
   <details><summary>Body</summary>
   <p align="center">
-    <img title="Body" src="img/gif/test.gif">
+    <img src="/README/body.png" alt="png"/>
   </p>
   </details>
   
