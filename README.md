@@ -1,4 +1,4 @@
-<h1 align="center">Проект по тестированию страницы сайта <a href="https://maximumtest.ru/" target="_blank">Поставить логотип</a> 
+<h1 align="center">Проект по тестированию страницы сайта <a href="https://maximumtest.ru/" target="_blank"><img src="/README/icons/ME.png" alt="Logo"/></a> 
 
 ## :open_book: Содержание:
 - [Технологии и инструменты](#gear-проект-реализован-с-использованием)
@@ -13,6 +13,21 @@
 - [Atlassian Jira](#-результаты-выполнения-тестов-интегрированы-с-atlassian-jira)
 
 ## :gear: Проект реализован с использованием
+  <p align="center">
+    <img src="/README/icons/python.svg" width="50" height="50"  alt="python"/>
+    <img src="/README/icons/pycharm.svg" width="50" height="50"  alt="pycharm"/>
+    <img src="/README/icons/pytest.svg" width="50" height="50"  alt="pytest"/>
+    <img src="/README/icons/selene.png" width="50" height="50"  alt="selene"/>
+    <img src="/README/icons/requsests.png" width="50" height="50"  alt="requsests"/>
+    <img src="/README/icons/json.svg" width="50" height="50"  alt="json schema"/>
+    <img src="/README/icons/selenoid.svg" width="50" height="50"  alt="selenoid"/>
+    <img src="/README/icons/jenkins.svg" width="50" height="50"  alt="jenkins"/>
+    <img src="/README/icons/allure.svg" width="50" height="50"  alt="allure"/>
+    <img src="/README/icons/testops.svg" width="50" height="50"  alt="testops"/>
+    <img src="/README/icons/github.svg" width="50" height="50"  alt="github"/>
+    <img src="/README/icons/telegram.svg" width="50" height="50"  alt="telegram"/>
+    <img src="/README/icons/jira.svg" width="50" height="50"  alt="jira"/>
+ </p>
 
 
 ## :heavy_check_mark: Описание
@@ -27,7 +42,7 @@
 > - Изменение заголовка первого экрана в зависимости от региона;
 > - Открывание попапа на первом экране.
 
-## <img width="5%" title="Jenkins" src="img/logo/Jenkins.svg"> Запуск тестов из [Jenkins](https://jenkins.autotests.cloud/job/002_Clorhexidinum_diploma_python/)
+## <img src="/README/icons/jenkins.svg" width="50" height="50"  alt="jenkins"/> Запуск тестов из [Jenkins](https://jenkins.autotests.cloud/job/002_Clorhexidinum_diploma_python/)
   
   Для запуска тестов из Jenkins
 
@@ -51,14 +66,14 @@ pytest *test_folder*
   
 ## :bar_chart: Отчеты о прохождении тестов 
   
-### <img width="3%" title="Allure" src="img/logo/Allure.svg"> Allure
+### <img src="/README/icons/allure.svg" width="50" height="50"  alt="allure"/> Allure
 
 После прохождения тестов формируется отчет в [Allure report](https://jenkins.autotests.cloud/job/002_Clorhexidinum_diploma_python/8/allure/)
 
-<img src="img/screen/Bot.jpg" alt="Allure"/>
+
   
 
-### <img width="3%" title="Telegram" src="img/logo/Telegram.svg"> Telegram
+### <img src="/README/icons/telegram.svg" width="50" height="50"  alt="telegram"/> Telegram
 
 И отправляется краткий отчет в Telegram
 
@@ -114,10 +129,10 @@ pytest *test_folder*
   </details>
   
 
-## <img width="3%" title="Allure" src="img/logo/Allure_TO.svg"> Проект интегрирован с Allure TestOps
+## <img src="/README/icons/testops.svg" width="50" height="50"  alt="testops"/> Проект интегрирован с Allure TestOps
 
 
-## <img width="3%" title="JIRA" src="img/logo/"> Результаты выполнения тестов интегрированы с Atlassian Jira
+## <img src="/README/icons/jira.svg" width="50" height="50"  alt="jira"/> Результаты выполнения тестов интегрированы с Atlassian Jira
   
   
 
