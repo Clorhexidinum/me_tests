@@ -84,9 +84,9 @@ pytest *test_folder*
 
 После прохождения тестов формируется отчет в [Allure report](https://jenkins.autotests.cloud/job/002_Clorhexidinum_diploma_python/8/allure/)
   <p align="center">
-    <img src="/README/report1.png" height="195" alt="allure"/>
-    <img src="/README/report3.png" height="195" alt="allure"/>
-    <img src="/README/report4.png" height="195" alt="allure"/>
+    <img src="/README/report1.png" height="150" alt="allure"/>
+    <img src="/README/report3.png" height="150" alt="allure"/>
+    <img src="/README/report4.png" height="150" alt="allure"/>
   </p>
   
 
@@ -151,8 +151,8 @@ pytest *test_folder*
 
 ## <img src="/README/icons/testops.svg" width="50" height="50"  alt="testops"/> Проект интегрирован с Allure TestOps
   <p align="center">
-    <img src="/README/test_ops2.png" height="250" alt="allure"/>
-    <img src="/README/test_ops.png" height="250" alt="allure"/>
+    <img src="/README/test_ops2.png" height="200" alt="allure"/>
+    <img src="/README/test_ops.png" height="200" alt="allure"/>
   </p>
 
 
