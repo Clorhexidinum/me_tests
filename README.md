@@ -16,19 +16,19 @@
 &#8287;&#8287;&#8287;&#8287;&#8287;
 ## :gear: Проект реализован с использованием
   <p align="center">
-    <img src="/README/icons/python.svg" width="50" height="50"  alt="python"/>
-    <img src="/README/icons/pycharm.svg" width="50" height="50"  alt="pycharm"/>
-    <img src="/README/icons/pytest.svg" width="50" height="50"  alt="pytest"/>
-    <img src="/README/icons/selene.png" width="50" height="50"  alt="selene"/>
-    <img src="/README/icons/requsests.png" width="50" height="50"  alt="requsests"/>
-    <img src="/README/icons/json.svg" width="50" height="50"  alt="json schema"/>
-    <img src="/README/icons/selenoid.svg" width="50" height="50"  alt="selenoid"/>
-    <img src="/README/icons/jenkins.svg" width="50" height="50"  alt="jenkins"/>
-    <img src="/README/icons/allure.svg" width="50" height="50"  alt="allure"/>
-    <img src="/README/icons/testops.svg" width="50" height="50"  alt="testops"/>
-    <img src="/README/icons/github.svg" width="50" height="50"  alt="github"/>
-    <img src="/README/icons/telegram.svg" width="50" height="50"  alt="telegram"/>
-    <img src="/README/icons/jira.svg" width="50" height="50"  alt="jira"/>
+    <img src="/README/icons/python.svg" title="Python" width="50" height="50"  alt="python"/>
+    <img src="/README/icons/pycharm.svg" title="Pycharm" width="50" height="50"  alt="pycharm"/>
+    <img src="/README/icons/pytest.svg" title="Pytest" width="50" height="50"  alt="pytest"/>
+    <img src="/README/icons/selene.png" title="Selene" width="50" height="50"  alt="selene"/>
+    <img src="/README/icons/requsests.png" title="Requsests" width="50" height="50"  alt="requsests"/>
+    <img src="/README/icons/json.svg" title="Json schema" width="50" height="50"  alt="json schema"/>
+    <img src="/README/icons/selenoid.svg" title="selenoid" width="50" height="50"  alt="selenoid"/>
+    <img src="/README/icons/jenkins.svg" title="Jenkins" width="50" height="50"  alt="jenkins"/>
+    <img src="/README/icons/allure.svg" title="Allure" width="50" height="50"  alt="allure"/>
+    <img src="/README/icons/testops.svg" title="Testops" width="50" height="50"  alt="testops"/>
+    <img src="/README/icons/github.svg" title="Github" width="50" height="50"  alt="github"/>
+    <img src="/README/icons/telegram.svg" title="Telegram" width="50" height="50"  alt="telegram"/>
+    <img src="/README/icons/jira.svg" title="Jira" width="50" height="50"  alt="jira"/>
  </p>
 
 
