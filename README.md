@@ -1,5 +1,6 @@
-<h1 align="center">Проект по тестированию страницы сайта <a href="https://maximumtest.ru/" target="_blank"><img src="/README/icons/ME.png" alt="Logo"/></a> 
+<h1 align="center">Проект по тестированию страницы сайта <a href="https://maximumtest.ru/" target="_blank"><img src="/README/icons/ME.png" alt="Logo"/></a></h1>
 
+&#8287;&#8287;&#8287;&#8287;&#8287;
 ## :open_book: Содержание:
 - [Технологии и инструменты](#gear-проект-реализован-с-использованием)
 - [Что проверяем](#heavy_check_mark-описание)
@@ -12,6 +13,7 @@
 - [Allure TestOps](#-проект-интегрирован-с-allure-testops)
 - [Atlassian Jira](#-результаты-выполнения-тестов-интегрированы-с-atlassian-jira)
 
+&#8287;&#8287;&#8287;&#8287;&#8287;
 ## :gear: Проект реализован с использованием
   <p align="center">
     <img src="/README/icons/python.svg" width="50" height="50"  alt="python"/>
@@ -30,18 +32,19 @@
  </p>
 
 
+&#8287;&#8287;&#8287;&#8287;&#8287;
 ## :heavy_check_mark: Описание
 В UI части автоматизирована проверка меню сайта Maximum Education, а также отображение попапа и изменения города. Использован паттерн проектирования автотестов PageObject.
 В проверках API реализована проверка статусов и структуры ответов на соответствие схеме JSON.
   
 ## :heavy_check_mark: Что проверяем
-
 > - Выбор города;
 > - Открытие попапа в хедере;
 > - Переход на предметные страницы;
 > - Изменение заголовка первого экрана в зависимости от региона;
 > - Открывание попапа на первом экране.
 
+&#8287;&#8287;&#8287;&#8287;&#8287;
 ## <img src="/README/icons/jenkins.svg" width="50" height="50"  alt="jenkins"/> Запуск тестов из [Jenkins](https://jenkins.autotests.cloud/job/002_Clorhexidinum_diploma_python/)
   
   Для запуска тестов из Jenkins
@@ -71,13 +74,15 @@
 > - browser_version - версия браузера
 > - window_size - размер окна браузера
   
+&#8287;&#8287;&#8287;&#8287;&#8287;
 ## :computer: Запуск тестов из терминала
 
 Для локального запуска необходимо выполнить команду:
 ```
 pytest *test_folder*
 ```
-  
+
+&#8287;&#8287;&#8287;&#8287;&#8287;
 ## :bar_chart: Отчеты о прохождении тестов 
   
 ### <img src="/README/icons/allure.svg" width="50" height="50"  alt="allure"/> Allure
@@ -89,16 +94,15 @@ pytest *test_folder*
     <img src="/README/report4.png" height="150" alt="allure"/>
   </p>
   
-
-
   
-
+&#8287;&#8287;&#8287;&#8287;&#8287;
 ### <img src="/README/icons/telegram.svg" width="50" height="50"  alt="telegram"/> Telegram
 
 И отправляется краткий отчет в Telegram
 
 <img src="/README/notify.png" height="250" alt="notify"/>
   
+&#8287;&#8287;&#8287;&#8287;&#8287;
 ## :movie_camera: Тестовые артефакты
 
 В результате прохождения тестов собираются следующие артефакты:
@@ -149,19 +153,14 @@ pytest *test_folder*
   </details>
   
 
+&#8287;&#8287;&#8287;&#8287;&#8287;
 ## <img src="/README/icons/testops.svg" width="50" height="50"  alt="testops"/> Проект интегрирован с Allure TestOps
   <p align="center">
     <img src="/README/test_ops2.png" height="200" alt="allure"/>
     <img src="/README/test_ops.png" height="200" alt="allure"/>
   </p>
 
-
+&#8287;&#8287;&#8287;&#8287;&#8287;
 ## <img src="/README/icons/jira.svg" width="50" height="50"  alt="jira"/> Результаты выполнения тестов интегрированы с Atlassian Jira
   
-  <img src="/README/jira.png" height="250" alt="jira"/>
-  
-  
-
-
-  
-  
+  <img src="/README/jira.png" height="250" alt="jira"/> 
